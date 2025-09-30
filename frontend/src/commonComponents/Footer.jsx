@@ -12,9 +12,11 @@ const Footer = () => {
                     <Grid size={{ xs: 12, md: 2 }}>
                         <img src={footerData.logo} style={{ width: "152px", paddingBottom: "10px", paddingTop: "10px" }} alt='logo' />
                         <Typography variant='body2' sx={{ opacity: 0.7, maxWidth: "240px" }} >{footerData.copyRights}</Typography>
-                        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                        <Box sx={{ display: "flex", justifyContent: "space-between", flexWrap:"wrap", gap:2 }}>
                             {footerData.socials.map((item) => (
-                                <IconButton key={item.id} sx={{ width: "18px" }}>
+                                <IconButton key={item.id} sx={{ width: "18px", flex: "1 1 calc(33.33% - 16px)",  // 3 per row
+                                maxWidth: "33.33%",
+                                justifyContent: "space-between" }}>
                                     {item.iconLink}
                                 </IconButton>
                             ))}

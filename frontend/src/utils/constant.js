@@ -340,3 +340,6 @@ export const factData = {
         }
     ]
 }
+
+
+//used in techstack.jsx
